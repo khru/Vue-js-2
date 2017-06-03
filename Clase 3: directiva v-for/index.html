@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- SI queremos utilizar vue lo podemos hacer utilizando su CDN -->
+        <script src="https://unpkg.com/vue@2.3.3"></script>
+    </head>
+    <body>
+        <!-- Vue JS-->
+         <main>
+            <!-- este tipo de randerización también se puede hacer en bloque en base gracias a la etiqueta template -->
+            <!--ITERANDO SOBRE ARRAY-->
+            <template v-if="dias.laborales">
+                <h1>Los días laborales son</h1>
+                <ul>
+                    <!-- la manera normal de recorrelo sería así <li v-for="dia in dias.laborales">{{dia}}</li> -->
+                    <li v-for="(dia, index) in dias.laborales">{{dia}}</li> 
+                </ul>
+            </template>
+            <!--ITERANDO SOBRE ARRAY-->
+            <template v-if="dias.noLaborales">
+                <h1>Los días no laborales son</h1>
+                <ul>
+                    <!-- la manera normal de recorrelo sería así <li v-for="dia in dias.noLaborales">{{dia}}</li> -->
+                    <li v-for="dia in dias.noLaborales">{{dia}}</li>
+                </ul>
+            </template>
+            <template v-if="trabajadores">
+                <h1>Los trabajadores disponibles son</h1>
+                <!--ITERANDO SOBRE ARRAY-->
+                <ul v-for="trabajador in trabajadores">
+                    <!--ITERANDO SOBRE OBJETOS-->
+                    <li v-for="(value, key, index) in trabajador">{{index}} - {{key}}: {{value}}</li>
+                </ul>
+            </template>
+
+        </main>
+        <script src="js/main.js"></script>
+    </body>
+</html>
