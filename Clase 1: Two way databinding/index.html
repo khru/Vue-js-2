@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- SI queremos utilizar vue lo podemos hacer utilizando su CDN -->
+        <script src="https://unpkg.com/vue@2.3.3"></script>
+    </head>
+    <body>
+        <!-- Comenta el código según la versión que quieras probar -->
+        <!-- Vanilla JS-->
+        <!-- <main>
+            <h1>...</h1>
+            <input type="text" name="two-way-databinding" value="" placeholder="Escribe lo que quieras">
+        </main> -->
+        <!-- Vue JS-->
+         <main>
+            <!--
+                utilizando la sintaxis de doble corchetes y expecificandele el nombre de la clave el modelo
+                lo que hará será comprobar si dicha clave existe en el modelo y en el caso de existir
+                la sustituye
+            -->
+            <h1>{{mensaje || '...'}}</h1>
+            <!--
+                utilizando la directiva v-model lo que hacemos es bindear un dato del modelo al HTML
+            -->
+            <input type="text" name="two-way-databinding" value="" v-model="mensaje" placeholder="Escribe lo que quieras">
+        </main>
+        <script src="js/main.js"></script>
+    </body>
+</html>
