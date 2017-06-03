@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- SI queremos utilizar vue lo podemos hacer utilizando su CDN -->
+        <script src="https://unpkg.com/vue@2.3.3"></script>
+    </head>
+    <body>
+        <!-- Vue JS-->
+         <main>
+             <!-- Diferencias entre directiva v-show y v-if -->
+            <h1 v-show="conectado">{{mensajeShow}}</h1>
+            <hr v-if="conectado">
+            <h1 v-if="conectado">{{mensajeIf}}</h1>
+            <hr>
+            <!-- Ejemplos de las directivas if -->
+            <h2 v-if="conectado && (edad < 18)">Eres menor de edad</h2>
+            <h2 v-else-if="conectado && (edad >= 65)">Perteneces a la tercera edad</h2>
+            <h2 v-else>Eres un adulto</h2>
+
+            <!-- este tipo de randerización también se puede hacer en bloque en base gracias a la etiqueta template -->
+            <template v-if="conectado && (edad > 18 && edad < 65)">
+                <h3>Bienvenido {{nombre || ''}}</h3>
+                <nav>
+                    <ul>
+                        <li><a href="google.com">Inicio</a></li>
+                        <li><a href="google.com">Mis contactos</a></li>
+                        <li><a href="google.com">Mis cosas</a></li>
+                    </ul>
+                </nav>
+            </template>
+
+        </main>
+        <script src="js/main.js"></script>
+    </body>
+</html>
