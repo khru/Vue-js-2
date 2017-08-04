@@ -1,1 +1,1 @@
-vue 2 básico
+vue 2 curso básico

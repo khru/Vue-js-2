@@ -1,2 +1,2 @@
 
-Copyright (C) 2017 khru
+Copyright (C) 2017 Emmanuel Valverde

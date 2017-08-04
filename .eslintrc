@@ -1,0 +1,32 @@
+{
+	"parser": "vue-eslint-parser",
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true,
+		"jquery": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"vue",
+		"airbnb"
+	],
+	"plugins": [
+		"vue"
+	],
+	"rules": {
+		"no-console": "warn",
+		"arrow-body-style": [2, "as-needed"],
+		"no-param-reassign": [2, {"props": false}],
+		"import": 0,
+		"func-names": 0,
+		"space-before-function-paren": 0,
+		"max-len": 0,
+		"comma-dangle": 0,
+		"no-underscore-dangle": 0,
+		"consistent-return": 0,
+		"jsx-a11y/href-no-hash": 0,
+		"no-new": 0,
+		'vue/jsx-uses-vars': 2,
+	}
+}
